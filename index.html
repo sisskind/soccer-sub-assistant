@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Soccer Sub Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Soccer Sub Tracker</h1>
+
+  <!-- Timer -->
+  <div id="timer-container">
+    <span id="timer">00:00</span>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="resetTimer()">Reset</button>
+  </div>
+
+  <!-- Add players -->
+  <div id="add-players">
+    <input type="text" id="player-input" placeholder="Enter players (comma separated)">
+    <button onclick="addPlayers()">Add</button>
+  </div>
+
+  <!-- Field positions -->
+  <h2>Field</h2>
+  <div id="field">
+    <div class="position">Goalie: <select id="goalie"></select></div>
+    <div class="position">Defense 1: <select id="def1"></select></div>
+    <div class="position">Defense 2: <select id="def2"></select></div>
+    <div class="position">Midfield 1: <select id="mid1"></select></div>
+    <div class="position">Midfield 2: <select id="mid2"></select></div>
+    <div class="position">Offense 1: <select id="off1"></select></div>
+    <div class="position">Offense 2: <select id="off2"></select></div>
+  </div>
+
+  <!-- Bench -->
+  <h2>Bench</h2>
+  <ul id="bench"></ul>
+
+  <!-- Sub button -->
+  <button id="sub-btn" onclick="makeSub()">Substitute Next 2</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
